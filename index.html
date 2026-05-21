@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mandy Howe | howetosocial</title>
+
+  <!-- SEO Basics -->
+  <meta name="description" content="Mandy Howe (howetosocial) – zwischen Stall & Strategie. Echt statt fancy. Schreib mir per E-Mail, WhatsApp oder Instagram." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- TODO: Ersetze diese URL mit deiner finalen GitHub-Pages- oder Domain-URL -->
+  <link rel="canonical" href="https://DEINE-URL-HIER/" />
+
+  <!-- Open Graph (Social Preview) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="Mandy Howe | howetosocial" />
+  <meta property="og:description" content="3 Pferde · 3 Berufe · 1 ehrlicher Account. Echt statt fancy." />
+  <meta property="og:url" content="https://DEINE-URL-HIER/" />
+  <meta property="og:site_name" content="howetosocial" />
+
+  <!-- Optional aber empfohlen: og:image -->
+  <!-- Lege dafür eine Datei og.jpg ins Repo (Root) oder nutze eine absolute URL -->
+  <meta property="og:image" content="https://DEINE-URL-HIER/og.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mandy Howe | howetosocial" />
+  <meta name="twitter:description" content="Zwischen Stall & Strategie. Echt statt fancy." />
+  <meta name="twitter:image" content="https://DEINE-URL-HIER/og.jpg" />
+
+  <meta name="theme-color" content="#fdf8f4" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #fdf8f4;
+      --nude: #e8d5c4;
+      --rose: #d4a5a0;
+      --rose-deep: #b8736d;
+      --text: #2c2420;
+      --text-light: #7a6a65;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(ellipse at 20% 20%, rgba(212,165,160,0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(232,213,196,0.2) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 60px 0 40px;
+      text-align: center;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .logo-badge {
+      display: inline-block;
+      background: var(--rose);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 10vw, 64px);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--rose-deep);
+    }
+
+    .tagline {
+      font-size: 13px;
+      color: var(--text-light);
+      letter-spacing: 0.08em;
+      margin-top: 16px;
+      font-weight: 300;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 36px 0;
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--nude);
+    }
+    .divider span { font-size: 16px; }
+
+    .bio {
+      text-align: center;
+      animation: fadeUp 0.8s 0.3s ease both;
+      margin-bottom: 40px;
+    }
+
+    .bio p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-light);
+      font-weight: 300;
+    }
+
+    .bio strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .horses {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 24px 0 40px;
+      animation: fadeUp 0.8s 0.4s ease both;
+    }
+
+    .horse-tag {
+      background: var(--white);
+      border: 1px solid var(--nude);
+      color: var(--text-light);
+      font-size: 12px;
+      font-weight: 400;
+      padding: 6px 14px;
+      border-radius: 100px;
+      letter-spacing: 0.05em;
+    }
+
+    .contact-section {
+      animation: fadeUp 0.8s 0.5s ease both;
+      margin-bottom: 60px;
+    }
+
+    .contact-label {
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 20px;
+    }
+
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 20px 24px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      margin-bottom: 12px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      overflow: hidden;
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    }
+
+    .btn-email {
+      background: var(--white);
+      border: 1px solid var(--nude);
+      color: var(--text);
+    }
+
+    .btn-whatsapp {
+      background: var(--rose-deep);
+      color: var(--white);
+    }
+
+    .btn-instagram {
+      background: var(--text);
+      color: var(--white);
+    }
+
+    .btn-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .btn-icon {
+      font-size: 20px;
+      width: 32px;
+      text-align: center;
+    }
+
+    .btn-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .btn-title {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .btn-subtitle {
+      font-size: 12px;
+      opacity: 0.75;
+      font-weight: 300;
+      margin-top: 2px;
+    }
+
+    .btn-arrow {
+      font-size: 18px;
+      opacity: 0.4;
+    }
+
+    .quote {
+      text-align: center;
+      margin: 40px 0;
+      animation: fadeUp 0.8s 0.6s ease both;
+    }
+
+    .quote p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--rose-deep);
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 0 40px;
+      font-size: 11px;
+      color: var(--text-light);
+      letter-spacing: 0.05em;
+      animation: fadeUp 0.8s 0.7s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .deco-line {
+      width: 40px;
+      height: 2px;
+      background: var(--rose);
+      margin: 0 auto 24px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <div class="logo-badge">howetosocial</div>
+      <h1>Mandy\
+<em>Howe</em></h1>
+      <p class="tagline">3 Pferde · 3 Berufe · 1 ehrlicher Account</p>
+    </header>
+
+    <div class="divider"><span>🐴</span></div>
+
+    <div class="bio">
+      <p>
+        Ich erzähle <strong>Geschichten</strong> – für mich & für dich.\
+\
+
+        Selbstständig | zwischen Stall & Strategie.\
+\
+
+        Echt statt fancy.
+      </p>
+    </div>
+
+    <div class="horses">
+      <span class="horse-tag">🤍 Sammy</span>
+      <span class="horse-tag">🤍 Texas</span>
+      <span class="horse-tag">🤍 Goldi</span>
+    </div>
+
+    <div class="contact-section">
+      <p class="contact-label">Schreib mir</p>
+
+      <a href="mailto:info@howetosocial.de" class="contact-btn btn-email">
+        <div class="btn-left">
+          <span class="btn-icon">✉️</span>
+          <div class="btn-text">
+            <span class="btn-title">Per Email</span>
+            <span class="btn-subtitle">info@howetosocial.de</span>
+          </div>
+        </div>
+        <span class="btn-arrow">→</span>
+      </a>
+
+      <a href="https://wa.me/4915737550583" target="_blank" rel="noopener noreferrer" class="contact-btn btn-whatsapp">
+        <div class="btn-left">
+          <span class="btn-icon">💬</span>
+          <div class="btn-text">
+            <span class="btn-title">WhatsApp</span>
+            <span class="btn-subtitle">015737550583</span>
+          </div>
+        </div>
+        <span class="btn-arrow">→</span>
+      </a>
+
+      <a href="https://instagram.com/howetosocial" target="_blank" rel="noopener noreferrer" class="contact-btn btn-instagram">
+        <div class="btn-left">
+          <span class="btn-icon">📸</span>
+          <div class="btn-text">
+            <span class="btn-title">Instagram</span>
+            <span class="btn-subtitle">@howetosocial</span>
+          </div>
+        </div>
+        <span class="btn-arrow">→</span>
+      </a>
+    </div>
+
+    <div class="quote">
+      <div class="deco-line"></div>
+      <p>„Nicht perfekt –\
+aber echt."</p>
+    </div>
+
+    <footer>
+      © 2025 Mandy Howe · howetosocial
+    </footer>
+
+  </div>
+</body>
+</html>
