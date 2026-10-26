@@ -1,375 +1,180 @@
-<!DOCTYPE html>
+<<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Mandy Howe | howetosocial</title>
-
-  <!-- SEO Basics -->
-  <meta name="description" content="Mandy Howe (howetosocial) – zwischen Stall & Strategie. Echt statt fancy. Schreib mir per E-Mail, WhatsApp oder Instagram." />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-
-  <!-- TODO: Ersetze diese URL mit deiner finalen GitHub-Pages- oder Domain-URL -->
-  <link rel="canonical" href="https://DEINE-URL-HIER/" />
-
-  <!-- Open Graph (Social Preview) -->
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="de_DE" />
-  <meta property="og:title" content="Mandy Howe | howetosocial" />
-  <meta property="og:description" content="3 Pferde · 3 Berufe · 1 ehrlicher Account. Echt statt fancy." />
-  <meta property="og:url" content="https://DEINE-URL-HIER/" />
-  <meta property="og:site_name" content="howetosocial" />
-
-  <!-- Optional aber empfohlen: og:image -->
-  <!-- Lege dafür eine Datei og.jpg ins Repo (Root) oder nutze eine absolute URL -->
-  <meta property="og:image" content="https://DEINE-URL-HIER/og.jpg" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mandy Howe | howetosocial" />
-  <meta name="twitter:description" content="Zwischen Stall & Strategie. Echt statt fancy." />
-  <meta name="twitter:image" content="https://DEINE-URL-HIER/og.jpg" />
-
-  <meta name="theme-color" content="#fdf8f4" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --cream: #fdf8f4;
-      --nude: #e8d5c4;
-      --rose: #d4a5a0;
-      --rose-deep: #b8736d;
-      --text: #2c2420;
-      --text-light: #7a6a65;
-      --white: #ffffff;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image:
-        radial-gradient(ellipse at 20% 20%, rgba(212,165,160,0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 80%, rgba(232,213,196,0.2) 0%, transparent 50%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .container {
-      position: relative;
-      z-index: 1;
-      max-width: 480px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    header {
-      padding: 60px 0 40px;
-      text-align: center;
-      animation: fadeUp 0.8s ease both;
-    }
-
-    .logo-badge {
-      display: inline-block;
-      background: var(--rose);
-      color: var(--white);
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      padding: 6px 16px;
-      border-radius: 100px;
-      margin-bottom: 28px;
-    }
-
-    h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(42px, 10vw, 64px);
-      font-weight: 300;
-      line-height: 1.1;
-      margin-bottom: 8px;
-    }
-
-    h1 em {
-      font-style: italic;
-      color: var(--rose-deep);
-    }
-
-    .tagline {
-      font-size: 13px;
-      color: var(--text-light);
-      letter-spacing: 0.08em;
-      margin-top: 16px;
-      font-weight: 300;
-    }
-
-    .divider {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 36px 0;
-      animation: fadeUp 0.8s 0.2s ease both;
-    }
-    .divider::before, .divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--nude);
-    }
-    .divider span { font-size: 16px; }
-
-    .bio {
-      text-align: center;
-      animation: fadeUp 0.8s 0.3s ease both;
-      margin-bottom: 40px;
-    }
-
-    .bio p {
-      font-size: 15px;
-      line-height: 1.8;
-      color: var(--text-light);
-      font-weight: 300;
-    }
-
-    .bio strong {
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .horses {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin: 24px 0 40px;
-      animation: fadeUp 0.8s 0.4s ease both;
-    }
-
-    .horse-tag {
-      background: var(--white);
-      border: 1px solid var(--nude);
-      color: var(--text-light);
-      font-size: 12px;
-      font-weight: 400;
-      padding: 6px 14px;
-      border-radius: 100px;
-      letter-spacing: 0.05em;
-    }
-
-    .contact-section {
-      animation: fadeUp 0.8s 0.5s ease both;
-      margin-bottom: 60px;
-    }
-
-    .contact-label {
-      text-align: center;
-      font-size: 11px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-light);
-      margin-bottom: 20px;
-    }
-
-    .contact-btn {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      padding: 20px 24px;
-      border-radius: 16px;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 400;
-      margin-bottom: 12px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      overflow: hidden;
-    }
-
-    .contact-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
-    }
-
-    .btn-email {
-      background: var(--white);
-      border: 1px solid var(--nude);
-      color: var(--text);
-    }
-
-    .btn-whatsapp {
-      background: var(--rose-deep);
-      color: var(--white);
-    }
-
-    .btn-instagram {
-      background: var(--text);
-      color: var(--white);
-    }
-
-    .btn-left {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .btn-icon {
-      font-size: 20px;
-      width: 32px;
-      text-align: center;
-    }
-
-    .btn-text {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .btn-title {
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 1.2;
-    }
-
-    .btn-subtitle {
-      font-size: 12px;
-      opacity: 0.75;
-      font-weight: 300;
-      margin-top: 2px;
-    }
-
-    .btn-arrow {
-      font-size: 18px;
-      opacity: 0.4;
-    }
-
-    .quote {
-      text-align: center;
-      margin: 40px 0;
-      animation: fadeUp 0.8s 0.6s ease both;
-    }
-
-    .quote p {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 22px;
-      font-weight: 300;
-      color: var(--rose-deep);
-      line-height: 1.5;
-    }
-
-    footer {
-      text-align: center;
-      padding: 24px 0 40px;
-      font-size: 11px;
-      color: var(--text-light);
-      letter-spacing: 0.05em;
-      animation: fadeUp 0.8s 0.7s ease both;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .deco-line {
-      width: 40px;
-      height: 2px;
-      background: var(--rose);
-      margin: 0 auto 24px;
-      border-radius: 2px;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mandy Howe – UGC für Hund, Katze, Pferd &amp; Lifestyle</title>
+<meta name="description" content="UGC-Creatorin und Social Media Managerin: echter Content für Marken rund um Pferde, Haustiere, Wellness und Familie.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--rose:#A8605C;--ink:#2B2321;--text:#4A3F3C;--muted:#6E605C;--bg:#FBF6F3}
+body{margin:0;font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:inherit}
+[hidden]{display:none!important}
+h1,h2,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500}
+section{padding:clamp(56px,8vw,96px) clamp(20px,5vw,72px)}
+.wrap{max-width:1200px;margin:0 auto}
+h2.big{font-size:clamp(34px,4.6vw,52px);margin:0;line-height:1.1;text-align:center}
+.hero{text-align:center;padding-top:48px;padding-bottom:clamp(40px,6vw,72px)}
+.hero .wrap{max-width:760px}
+.badge{display:inline-block;background:var(--rose);color:#fff;font-size:13px;font-weight:500;letter-spacing:.16em;padding:10px 24px;border-radius:999px}
+.hero h1{font-size:clamp(52px,11vw,112px);line-height:1;margin:36px 0 0}
+.hero h2{font-size:clamp(30px,4.4vw,46px);line-height:1.15;margin:40px 0 0}
+.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:36px}
+.btn{border-radius:999px;padding:16px 32px;font-weight:500;text-decoration:none;font-size:17px;border:1.5px solid var(--ink)}
+.btn.dark{background:var(--ink);color:#fff}
+.divider{display:flex;align-items:center;gap:16px;max-width:560px;margin:0 auto;padding:0 20px;color:var(--rose)}
+.divider i{flex:1;height:1px;background:#DCC3BB}
+.about .wrap{max-width:620px;font-size:19px;line-height:1.7;color:var(--text);text-align:center}
+.about h2{font-size:30px;margin:0 0 8px}
+.about p{margin:0 0 48px;text-align:justify}
+.about ul{display:inline-block;text-align:left;margin:0;padding-left:22px;font-size:17px}
+.sub{font-size:18px;line-height:1.6;color:var(--text);margin:16px auto 0;max-width:560px;text-align:center}
+.grid{display:grid;gap:24px;margin-top:44px}
+.videos{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.slot video,.ph{display:flex;width:100%;aspect-ratio:9/16;border-radius:24px}
+.slot video{object-fit:cover;background:#000}
+.ph{background:#E7D3CC;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:#5A4D49;font-size:15px}
+.themen{background:#F3E7E2}
+.cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.cards img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px}
+.cards h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;font-weight:600;margin:16px 0 0}
+.cards p{margin:6px 0 0;line-height:1.55;color:var(--text)}
+.info .wrap{max-width:1000px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px}
+.info h2{font-size:clamp(32px,4vw,44px);margin:0;line-height:1.1}
+.info ul,.info ol{margin:24px 0 0;display:grid;gap:14px;font-size:17px;line-height:1.5}
+.info ul{padding:0;list-style:none}.info ol{padding-left:22px}
+.kontakt{padding-top:clamp(24px,4vw,48px)}
+.kontakt .wrap{max-width:520px}
+.label{text-align:center;font-size:13px;letter-spacing:.16em;color:var(--muted)}
+.cta{display:flex;align-items:center;gap:16px;border-radius:22px;padding:22px 24px;text-decoration:none;margin-top:14px}
+.cta:first-of-type{margin-top:20px}
+.cta b{display:block;font-weight:500;font-size:17px}.cta small{display:block;font-size:14px;margin-top:2px}
+.cta div{flex:1}
+.mail{background:#fff;border:1.5px solid #E4D2CC}.mail small{color:var(--muted)}
+.wa{background:var(--rose);color:#fff}.ig{background:var(--ink);color:#fff}.ig small{color:#E4D2CC}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:0 20px 48px}
+</style>
 </head>
-
 <body>
-  <div class="container">
 
-    <header>
-      <div class="logo-badge">howetosocial</div>
-      <h1>Mandy\
-<em>Howe</em></h1>
-      <p class="tagline">3 Pferde · 3 Berufe · 1 ehrlicher Account</p>
-    </header>
+<section class="hero">
+<div class="wrap">
+<div class="badge">HOWETOSOCIAL</div>
+<h1>HoweToSocial</h1>
+<h2>UGC-Creator / Equestrian / Mama</h2>
+<div class="btns">
+<a class="btn dark" href="#kontakt">Zusammenarbeit anfragen</a>
+<a class="btn" href="#themen">Meine Themen</a>
+</div>
+</div>
+</section>
 
-    <div class="divider"><span>🐴</span></div>
+<div class="divider" aria-hidden="true">
+<i></i>
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 21V10a6 6 0 0 1 12 0v11"/><path d="M6 17h3M15 17h3"/></svg>
+<i></i>
+</div>
 
-    <div class="bio">
-      <p>
-        Ich erzähle <strong>Geschichten</strong> – für mich & für dich.\
-\
+<section class="about">
+<div class="wrap">
+<h2>Echter Content für deine Marke</h2>
+<p>Ich weiß, wie wichtig es ist, dass Inhalte nicht nach konstruierter Werbung klingen. Deshalb erstelle ich für dich Content, der die Zielgruppe erreicht. Egal ob Reitsport, Haustiere, Wellness oder Familie: Mein Content holt Menschen ab und inspiriert zum Handeln.</p>
+<h2>Über mich</h2>
+<ul>
+<li>Content Creatorin und Social Media Managerin</li>
+<li>Seit 28 Jahren Pferdebesitzerin in Eigenregie</li>
+<li>Stolze Mama von 2 (9 und 13 Jahre)</li>
+<li>Sehr naturverbunden</li>
+</ul>
+</div>
+</section>
 
-        Selbstständig | zwischen Stall & Strategie.\
-\
+<section id="portfolio">
+<div class="wrap">
+<h2 class="big">Beispielvideos</h2>
+<p class="sub">So sieht mein Content aus: echte Momente mit Tier und Produkt, ohne Hochglanz.</p>
+<!-- Videos: Dateien in den Ordner videos/ legen und video-1.mp4 bis video-4.mp4 nennen.
+     Weitere Videos: einen kompletten <div class="slot">…</div>-Block kopieren und die Nummer ändern. -->
+<div class="grid videos">
+<div class="slot"><div class="ph"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8.5 5 3.5-5 3.5z"/></svg>Beispielvideo 1</div><video controls playsinline preload="metadata" src="videos/video-1.mp4#t=0.1" hidden></video></div>
+<div class="slot"><div class="ph"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8.5 5 3.5-5 3.5z"/></svg>Beispielvideo 2</div><video controls playsinline preload="metadata" src="videos/video-2.mp4#t=0.1" hidden></video></div>
+<div class="slot"><div class="ph"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8.5 5 3.5-5 3.5z"/></svg>Beispielvideo 3</div><video controls playsinline preload="metadata" src="videos/video-3.mp4#t=0.1" hidden></video></div>
+<div class="slot"><div class="ph"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8.5 5 3.5-5 3.5z"/></svg>Beispielvideo 4</div><video controls playsinline preload="metadata" src="videos/video-4.mp4#t=0.1" hidden></video></div>
+</div>
+</div>
+</section>
 
-        Echt statt fancy.
-      </p>
-    </div>
+<section id="themen" class="themen">
+<div class="wrap">
+<h2 class="big">Für diese Themen mache ich Content</h2>
+<div class="grid cards">
+<div><img src="images/hund.jpg" alt="Boxer sitzt aufmerksam auf einer Wiese"><h3>Hunde</h3><p>Futter, Zubehör, Pflege und Spaziergang-Alltag.</p></div>
+<div><img src="images/katze.jpg" alt="Schwarz-weiße Katze auf einem Holzpfosten im Garten"><h3>Katzen</h3><p>Snacks, Spielzeug, Katzenmöbel und gemütliche Wohnmomente.</p></div>
+<div><img src="images/pferd.jpg" alt="Dunkelbraunes Pferd auf der Koppel"><h3>Pferde</h3><p>Reitbedarf, Stallalltag, Futter und Pflege, direkt aus dem Stall.</p></div>
+<div><img src="images/lifestyle.jpg" alt="Kanu auf einem See bei Sonnenuntergang"><h3>Lifestyle</h3><p>Alltag, Wohnen und Produkte, die ins echte Leben passen.</p></div>
+</div>
+</div>
+</section>
 
-    <div class="horses">
-      <span class="horse-tag">🤍 Sammy</span>
-      <span class="horse-tag">🤍 Texas</span>
-      <span class="horse-tag">🤍 Goldi</span>
-    </div>
+<section class="info">
+<div class="wrap">
+<div>
+<h2>Was du bekommst</h2>
+<ul>
+<li><strong>UGC-Videos:</strong> Produkttests, Unboxing, Erfahrungsberichte</li>
+<li><strong>Fotos &amp; Clips</strong> für Social Media und Ads</li>
+<li><strong>Hooks &amp; Skripte</strong> für mehr Aufmerksamkeit</li>
+<li><strong>Plattformen:</strong> TikTok, Instagram Reels und mehr</li>
+</ul>
+</div>
+<div>
+<h2>So läuft es ab</h2>
+<ol>
+<li><strong>Anfrage:</strong> Du schreibst mir kurz, was du brauchst.</li>
+<li><strong>Briefing:</strong> Ziel, Stil und Nutzungsrechte klären wir gemeinsam.</li>
+<li><strong>Produktion:</strong> Ich erstelle deinen Content.</li>
+<li><strong>Lieferung:</strong> Fertige Dateien, auf Wunsch mit einer Überarbeitungsrunde.</li>
+</ol>
+</div>
+</div>
+</section>
 
-    <div class="contact-section">
-      <p class="contact-label">Schreib mir</p>
+<section id="kontakt" class="kontakt">
+<div class="wrap">
+<div class="label">SCHREIB MIR</div>
+<a class="cta mail" href="mailto:info@howetosocial.de">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+<div><b>Per E-Mail</b><small>info@howetosocial.de</small></div>
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+</a>
+<a class="cta wa" href="https://wa.me/4915737550583">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.9 7L4 20l1.1-4.7A8 8 0 1 1 21 12Z"/></svg>
+<div><b>WhatsApp</b><small>015737550583</small></div>
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+</a>
+<a class="cta ig" href="https://instagram.com/howetosocial">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>
+<div><b>Instagram</b><small>@howetosocial</small></div>
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+</a>
+</div>
+</section>
 
-      <a href="mailto:info@howetosocial.de" class="contact-btn btn-email">
-        <div class="btn-left">
-          <span class="btn-icon">✉️</span>
-          <div class="btn-text">
-            <span class="btn-title">Per Email</span>
-            <span class="btn-subtitle">info@howetosocial.de</span>
-          </div>
-        </div>
-        <span class="btn-arrow">→</span>
-      </a>
+<footer>© Mandy Howe · HoweToSocial · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></footer>
 
-      <a href="https://wa.me/4915737550583" target="_blank" rel="noopener noreferrer" class="contact-btn btn-whatsapp">
-        <div class="btn-left">
-          <span class="btn-icon">💬</span>
-          <div class="btn-text">
-            <span class="btn-title">WhatsApp</span>
-            <span class="btn-subtitle">015737550583</span>
-          </div>
-        </div>
-        <span class="btn-arrow">→</span>
-      </a>
-
-      <a href="https://instagram.com/howetosocial" target="_blank" rel="noopener noreferrer" class="contact-btn btn-instagram">
-        <div class="btn-left">
-          <span class="btn-icon">📸</span>
-          <div class="btn-text">
-            <span class="btn-title">Instagram</span>
-            <span class="btn-subtitle">@howetosocial</span>
-          </div>
-        </div>
-        <span class="btn-arrow">→</span>
-      </a>
-    </div>
-
-    <div class="quote">
-      <div class="deco-line"></div>
-      <p>„Nicht perfekt –\
-aber echt."</p>
-    </div>
-
+<script>
+// Zeigt ein Video erst, wenn die Datei wirklich vorhanden ist; sonst bleibt der Platzhalter.
+document.querySelectorAll('.slot').forEach(function (slot) {
+  var v = slot.querySelector('video');
+  v.addEventListener('loadedmetadata', function () {
+    v.hidden = false;
+    slot.querySelector('.ph').hidden = true;
+  });
+});
+</script>
+</body>
+</html>
     <footer>
       © 2025 Mandy Howe · howetosocial\
 
